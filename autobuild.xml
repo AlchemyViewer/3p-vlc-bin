@@ -6,7 +6,7 @@
       <key>canonical_repo</key>
       <string>https://bitbucket.org/lindenlab/3p-vlc-bin</string>
       <key>copyright</key>
-      <string>Copyright (C) 1998-2016 VLC authors and VideoLAN</string>
+      <string>Copyright (C) 1998-2020 VLC authors and VideoLAN</string>
       <key>license</key>
       <string>GPL2</string>
       <key>license_file</key>
