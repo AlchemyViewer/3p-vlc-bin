@@ -19,6 +19,6 @@
 
 int main(int argc, char *argv[])
 {
-    printf("%d.%d.%d.%s\n", VERSION_MAJOR_MACRO, VERSION_MINOR_MACRO, VERSION_REVISION_MACRO, VERSION_BUILD_MACRO);
+    printf("%d.%d.%d\n", VERSION_MAJOR_MACRO, VERSION_MINOR_MACRO, VERSION_REVISION_MACRO);
     return 0;
 }

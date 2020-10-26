@@ -35,9 +35,6 @@ VLC_SOURCE_DIR_WIN32="vlc-win32"
 VLC_SOURCE_DIR_WIN64="vlc-win64"
 VLC_SOURCE_DIR_DARWIN64="vlc-darwin64"
 
-# used in VERSION.txt but common to all bit-widths and platforms
-build=${AUTOBUILD_BUILD_ID:=0}
-
 case "$AUTOBUILD_PLATFORM" in
     windows*)
         # choose VLC source dir - different for 32/64 bit versions
@@ -53,7 +50,6 @@ case "$AUTOBUILD_PLATFORM" in
            /DVERSION_MAJOR_MACRO="LIBVLC_VERSION_MAJOR" \
            /DVERSION_MINOR_MACRO="LIBVLC_VERSION_MINOR" \
            /DVERSION_REVISION_MACRO="LIBVLC_VERSION_REVISION" \
-           /DVERSION_BUILD_MACRO="\"${build}\"" \
            /Fo"$(cygpath -w "$stage/version.obj")" \
            /Fe"$(cygpath -w "$stage/version.exe")" \
            "$(cygpath -w "$top/version.c")"
@@ -92,7 +88,6 @@ case "$AUTOBUILD_PLATFORM" in
            -DVERSION_MAJOR_MACRO="LIBVLC_VERSION_MAJOR" \
            -DVERSION_MINOR_MACRO="LIBVLC_VERSION_MINOR" \
            -DVERSION_REVISION_MACRO="LIBVLC_VERSION_REVISION" \
-           -DVERSION_BUILD_MACRO="\"${build}\"" \
            -o "$stage/version" "$top/version.c"
         "$stage/version" > "$stage/version.txt"
         rm "$stage/version"
