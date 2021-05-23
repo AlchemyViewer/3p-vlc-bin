@@ -104,7 +104,7 @@ case "$AUTOBUILD_PLATFORM" in
         # library files
         cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlc.5.dylib" "$stage/lib/release/"
         cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlc.dylib" "$stage/lib/release/"
-        cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlccore.8.dylib" "$stage/lib/release/"
+        cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlccore.9.dylib" "$stage/lib/release/"
         cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlccore.dylib" "$stage/lib/release/"
 
         # plugins
