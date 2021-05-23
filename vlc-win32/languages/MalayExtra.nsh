@@ -1,7 +1,7 @@
 !insertmacro LANGFILE_EXT Malay
 ${LangFileString} Name_Section01 "Pemain Media (diperlukan)"
 ${LangFileString} Name_Section02a "Pintasan Menu Start"
-${LangFileString} Name_Section02b "Pintasan Desktop"
+${LangFileString} Name_Section02b "Pintasan Atas Meja"
 ${LangFileString} Name_Section34 "Pemalam Sesawang"
 ${LangFileString} Name_Section03 "Pemalam Mozilla"
 ${LangFileString} Name_Section04 "Pemalam ActiveX"
@@ -18,7 +18,7 @@ ${LangFileString} Desc_Section01 \
 ${LangFileString} Desc_Section02a \
     "Tambah ikon pada menu mula untuk capaian mudah"
 ${LangFileString} Desc_Section02b \
-    "Tambah ikon pada desktop untuk capaian mudah"
+    "Tambah ikon pada atas meja untuk capaian mudah"
 ${LangFileString} Desc_Section03 \
     "Pemalam VLC Mozilla dan Mozilla Firefox"
 ${LangFileString} Desc_Section04 \
@@ -50,10 +50,10 @@ ${LangFileString} Name_InstTypeRecommended "Disarankan"
 ${LangFileString} Name_InstTypeMinimum "Minimum"
 ${LangFileString} Name_InstTypeFull "Penuh"
 
-${LangFileString} Action_OnArrivalDVD "Main cereka DVD"
+${LangFileString} Action_OnArrivalDVD "Main filem DVD"
 ${LangFileString} Action_OnArrivalAudioCD "Main CD audio"
-${LangFileString} Action_OnArrivalVCDMovie "Main cereka VCD"
-${LangFileString} Action_OnArrivalSVCDMovie "Main cereka SVCD"
+${LangFileString} Action_OnArrivalVCDMovie "Main filem VCD"
+${LangFileString} Action_OnArrivalSVCDMovie "Main filem SVCD"
 ${LangFileString} Action_OnArrivalVideoFiles "Main fail video"
 ${LangFileString} Action_OnArrivalMusicFiles "Main fail audio"
 ${LangFileString} Action_OnArrivalDVDAudio "Main DVD audio"
