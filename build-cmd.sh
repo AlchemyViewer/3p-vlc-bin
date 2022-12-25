@@ -102,14 +102,14 @@ case "$AUTOBUILD_PLATFORM" in
         cp -r "${VLC_SOURCE_DIR_DARWIN64}/include/vlc/" "$stage/include/vlc"
 
         # library files
-        cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlc.5.dylib" "$stage/lib/release/"
-        cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlc.dylib" "$stage/lib/release/"
-        cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlccore.9.dylib" "$stage/lib/release/"
-        cp "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlccore.dylib" "$stage/lib/release/"
+        cp -a "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlc.5.dylib" "$stage/lib/release/"
+        cp -a "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlc.dylib" "$stage/lib/release/"
+        cp -a "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlccore.9.dylib" "$stage/lib/release/"
+        cp -a "${VLC_SOURCE_DIR_DARWIN64}/lib/libvlccore.dylib" "$stage/lib/release/"
 
         # plugins
-        cp "${VLC_SOURCE_DIR_DARWIN64}/plugins/"lib*_plugin".dylib" "$stage/lib/release/plugins/"
-        cp "${VLC_SOURCE_DIR_DARWIN64}/plugins/plugins.dat" "$stage/lib/release/plugins/"
+        cp -a "${VLC_SOURCE_DIR_DARWIN64}/plugins/"lib*_plugin".dylib" "$stage/lib/release/plugins/"
+        cp -a "${VLC_SOURCE_DIR_DARWIN64}/plugins/plugins.dat" "$stage/lib/release/plugins/"
 
         # license file
         cp "${VLC_SOURCE_DIR_DARWIN64}/COPYING.txt" "$stage/LICENSES/vlc.txt"
