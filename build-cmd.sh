@@ -129,7 +129,7 @@ case "$AUTOBUILD_PLATFORM" in
                     codesign --keychain "$KEYCHAIN_PATH" --sign "$APPLE_SIGNATURE" --force --timestamp "$dylib" || true
                 fi
             done
-            for dylib in $stage/lib/*/plugins/*.dylib;
+            for dylib in $stage/lib/*/plugins/*.*;
             do
                 if [ -f "$dylib" ]; then
                     codesign --keychain "$KEYCHAIN_PATH" --sign "$APPLE_SIGNATURE" --force --timestamp "$dylib" || true
