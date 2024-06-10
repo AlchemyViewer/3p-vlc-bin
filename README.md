@@ -1,3 +1,11 @@
+# 3p-vlc-bin
+
+[Autobuild][] packaged [libvlc][]
+
+[libvlc]: http://www.videolan.org/vlc/libvlc.html
+
+------------------------------------------------------------
+
 Important: This file is not part of the VLC distribution.
 It only serves to outline what is here and remind users
 who want to update to different versions of VLC that the 

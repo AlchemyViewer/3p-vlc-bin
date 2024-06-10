@@ -4,7 +4,7 @@
     <key>package_description</key>
     <map>
       <key>canonical_repo</key>
-      <string>https://git.alchemyviewer.org/alchemy/thirdparty/3p-vlc-bin</string>
+      <string>https://github.com/AlchemyViewer/3p-vlc-bin</string>
       <key>copyright</key>
       <string>Copyright (C) 1998-2020 VLC authors and VideoLAN</string>
       <key>license</key>
