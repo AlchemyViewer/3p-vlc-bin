@@ -2,6 +2,7 @@
 
 [Autobuild][] packaged [libvlc][]
 
+[Autobuild]: https://github.com/secondlife/autobuild
 [libvlc]: http://www.videolan.org/vlc/libvlc.html
 
 ------------------------------------------------------------
