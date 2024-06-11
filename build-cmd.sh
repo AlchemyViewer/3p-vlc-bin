@@ -114,28 +114,25 @@ case "$AUTOBUILD_PLATFORM" in
         # license file
         cp "${VLC_SOURCE_DIR_DARWIN64}/COPYING.txt" "$stage/LICENSES/vlc.txt"
 
-        if [ -n "${APPLE_SIGNATURE:=""}" -a -n "${APPLE_KEY:=""}" -a -n "${APPLE_KEYCHAIN:=""}" ]; then
-            KEYCHAIN_PATH="$HOME/Library/Keychains/$APPLE_KEYCHAIN"
-            security unlock-keychain -p $APPLE_KEY $KEYCHAIN_PATH
+        if [ -n "${AUTOBUILD_KEYCHAIN_PATH:=""}" -a -n "${AUTOBUILD_KEYCHAIN_ID:=""}" ]; then
             for dylib in $stage/lib/*/libvlccore.*.dylib;
             do
                 if [ -f "$dylib" ]; then
-                    codesign --keychain "$KEYCHAIN_PATH" --sign "$APPLE_SIGNATURE" --force --timestamp "$dylib" || true
+                    codesign --keychain "$AUTOBUILD_KEYCHAIN_PATH" --sign "$AUTOBUILD_KEYCHAIN_ID" --force --timestamp "$dylib"
                 fi
             done
             for dylib in $stage/lib/*/libvlc.*.dylib;
             do
                 if [ -f "$dylib" ]; then
-                    codesign --keychain "$KEYCHAIN_PATH" --sign "$APPLE_SIGNATURE" --force --timestamp "$dylib" || true
+                    codesign --keychain "$AUTOBUILD_KEYCHAIN_PATH" --sign "$AUTOBUILD_KEYCHAIN_ID" --force --timestamp "$dylib"
                 fi
             done
             for dylib in $stage/lib/*/plugins/*.*;
             do
                 if [ -f "$dylib" ]; then
-                    codesign --keychain "$KEYCHAIN_PATH" --sign "$APPLE_SIGNATURE" --force --timestamp "$dylib" || true
+                    codesign --keychain "$AUTOBUILD_KEYCHAIN_PATH" --sign "$AUTOBUILD_KEYCHAIN_ID" --force --timestamp "$dylib"
                 fi
             done
-            security lock-keychain $KEYCHAIN_PATH
         else
             echo "Code signing not configured; skipping codesign."
         fi
